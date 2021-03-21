@@ -1,0 +1,13 @@
+Port {{ sshd-port }}
+ListenAddress [::]:{{ sshd-port }}
+ListenAddress 0.0.0.0:{{ sshd-port }}
+PermitRootLogin no
+HostBasedAuthentication no
+PubkeyAuthentication yes
+PasswordAuthenticaiton yes
+KbdInteractiveAuthentication no
+ChallengeResponseAuthentication no
+PermitEmptyPasswords no
+HostKey /etc/ssh/ssh_host_ed25519_key
+HostKey /etc/ssh/ssh_host_rsa_key
+AuthenticationMethods publickey
